@@ -7,8 +7,25 @@ USERNAME="$1"
 USER_DIR="$BASE_DIR/$USERNAME"
 LOG_FILE="setup.log"
 
+# Проверяем, что имя передано
+
+if [ -z "$USERNAME" ]
+then
+    echo "Ошибка: укажите имя пользователя"
+    echo "Использование: $0 <username>"
+    exit 1
+fi
+
+#Проверяем существование директории
+
+if [ -d "$USER_DIR" ]
+then
+    echo "Ошибка: директория $USER_DIR уже существует"
+    exit
+fi
+
 # Создаём базовую директорию
-mkdir -p "$USER_DIR"
+mkdir -p "$USER_DIR" || { echo "Ошибка: не удалось создать директори $USER_DIR"; exit1; }
 
 # Создаём .bashrc с алиасами
 cat > "$USER_DIR/.bashrc" << 'EOF'
