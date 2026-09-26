@@ -1,0 +1,11 @@
+# Данные
+*.log
+*.img
+
+# Docker volumes
+docker-volumes/
+
+# Временные файлы
+*.swp
+*~
+.DS_Store
