@@ -4,9 +4,14 @@
 
 ## Что внутри
 
-- [setup-script/](setup-script/) — создание директории пользователя, `.bashrc` и логирование
+- [setup-script/](setup-script/) — ДЗ №1: скрипт автоматизации (создание директории пользователя, `.bashrc`, логирование)
+- [docker-lab/](docker-lab/) — ДЗ №2: Docker-контейнер + RAID/LVM + Nginx reverse proxy + TLS + systemd
 
 ## Стек
 
 - Bash
-- Linux
+- Linux (Ubuntu)
+- Docker (multi-stage build)
+- Nginx
+- systemd
+- RAID / LVM
