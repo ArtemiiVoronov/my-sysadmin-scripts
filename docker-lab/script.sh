@@ -2,10 +2,10 @@
 
 # Setup-скрипт: создаёт директорию пользователя, .bashrc и пишет в лог
 
-BASE_DIR="/tmp/setup-script"
+BASE_DIR="${SETUP_BASE_DIR:-/tmp/setup-script}"
 USERNAME="$1"
 USER_DIR="$BASE_DIR/$USERNAME"
-LOG_FILE="setup.log"
+LOG_FILE="$USER_DIR/setup.log"
 
 # Проверяем, что имя передано
 
